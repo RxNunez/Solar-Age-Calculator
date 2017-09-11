@@ -1,18 +1,20 @@
+import { moment } from './../node_modules/moment/moment.js';
+
 export class SolarAge {
 
-  constructor(bDay){
-    this.bDay = bDay;
-  }
+  function Calculator(skin) {
+  this.skin = skin;
+}
 
   getSecond(age){
     const secPerYear = 1000 * 60 * 60 * 24 * 365;
     let sec = Math.floor((age * secPerYear));
     return sec;
   }
-  getEarth(now, born){
-    let today = moment(now);
-    let birth = moment(born);
-    let output = ((Date.now() - birth / (31557600000));
+  getEarth(bday){
+    let now = moment();
+    let born = moment(bday);
+    let output = now.diff(born, 'seconds');
     return output;
   }
   getMercury(age){
@@ -32,7 +34,7 @@ export class SolarAge {
     return jupiter
   }
 }
-  timeLeft(world,userAge){
+  timeLeft(world, userAge){
     const expectancy = 71.5; //world average age 2016
     let lifeLeft ="";
     let mercuryLife = this.getMercury(expectancy);
@@ -50,7 +52,7 @@ export class SolarAge {
     }else if((world === "mercury" && userAge > mercuryLife) || (world === "venus" && userAge > venusLife) || (world === "mars" && userAge > marsLife) || (world === "jupiter" && userAge > jupiterLife)) {
       leftLife = `You should be dead on ${world}!`;
     }
-    return leftLife;
+    return lifeLeft;
     }
 
   }

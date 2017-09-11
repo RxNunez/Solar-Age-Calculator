@@ -1,5 +1,5 @@
 {
-  "name": "Solar-Age-Calculator",
+  "name": "solar-age-calculator",
   "description": "\"\"",
   "main": "index.js",
   "license": "ISC",
@@ -15,5 +15,8 @@
     "jquery": "^3.2.1",
     "bootstrap": "^3.3.7",
     "moment": "^2.18.1"
-  }
+  },
+  "authors": [
+    "RxNunez <Nunez.ryan@gmail.com>"
+  ]
 }
