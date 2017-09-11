@@ -21,12 +21,15 @@ export class SolarAge {
   }
   getVenus(age){
     let venus = Math.floor((age*.62));
+    return venus
   }
   getMars(age){
     let mars = Math.floor((age*1.88));
+    return mars
   }
   getJupiter(age){
     let jupiter = Math.floor((age*11.86));
+    return jupiter
   }
 }
   timeLeft(world,userAge){

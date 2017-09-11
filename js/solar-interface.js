@@ -1,5 +1,7 @@
+import {SolarAge} from './../js/solar.js'
+
 $(document).ready(function() {
-  $('#solar-age-form').submit(function(event) {
+  $('#solar-form').submit(function(event) {
     event.preventDefault();
     var bDay = $('#bDay').val();
     var solarCalculator = new Calculator("hot pink");
